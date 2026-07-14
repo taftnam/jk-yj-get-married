@@ -20,6 +20,33 @@
   />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=239d09eda1ed330ac100eb872a5ad1b7"></script>
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" integrity="sha384-TiCmbV6AUn87330krNIlOWZ7GkK6Z" crossorigin="anonymous"></script>
+  <script>
+    Kakao.init('239d09eda1ed330ac100eb872a5ad1b7');
+
+    Kakao.Share.createDefaultButton({
+      container: '#kakaotalk-sharing-btn',
+      objectType: 'feed',
+      content: {
+        title: '지균💕영주 결혼합니다',
+        description: '2026/08/29 PM 4:00 아펠가모 공덕 마리에홀',
+        imageUrl: 'https://taftnam.github.io/jk-yj-get-married/assets/images/gallery-03.jpg',
+        link: {
+          mobileWebUrl: 'https://taftnam.github.io/jk-yj-get-married/',
+          webUrl: 'https://taftnam.github.io/jk-yj-get-married/',
+        },
+      },
+      buttons: [
+        {
+          title: '모바일청첩장 보기',
+          link: {
+            mobileWebUrl: 'https://taftnam.github.io/jk-yj-get-married/',
+            webUrl: 'https://taftnam.github.io/jk-yj-get-married/',
+          },
+        },
+      ],
+    });
+</script>
 </head>
 <body>
   <main class="wrap">
@@ -314,7 +341,9 @@
       <img class="sec-title" src="./assets/svg/footer-heart.svg" alt="" aria-hidden="true" data-aos="fade-down"/>
       <p class="names" data-aos="fade-up" data-aos-delay="200">JIKYUN &amp; YOUNGJU<br />2026.08.29, PM4:00</p>
       <img class="heart" src="./assets/svg/heart_icon.svg" alt="" aria-hidden="true" />
-      <small>© 2026 Nam Jikyun & Jo Youngju<br/>Released under the MIT License</small>
+      <button style="background-color:#171717;" id="kakaotalk-sharing-btn">
+        <small>© 2026 Nam Jikyun & Jo Youngju<br/>Released under the MIT License</small>
+      </button>
     </footer>
   </main>
 
